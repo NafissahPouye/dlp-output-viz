@@ -32,13 +32,13 @@
     background-color: "#1BB580";
 }
 #org{
-  padding-left: 250px;
+  padding-left: 150px;
   padding-bottom: 50px;
 
 }
 #pp{
-  padding-left: 40px;
-  padding-bottom: 50px
+  padding-left: 80px;
+  padding-bottom: 50px;
 }
 #header{
     border-bottom-color: #dddddd;
@@ -51,7 +51,7 @@
   margin-bottom: 10px;
   padding-right: 5px;
   background-color: aliceblue;
-  border-color: aliceblue
+  border-color: aliceblue;
 }
 
 #footer{
@@ -94,11 +94,7 @@
     /*margin: */
 
   }
-/* .dc-chart tbody tr.dc-table-group td {
-    color: transparent;
-    color: #999999;
-    height: 1px;
- }*/
+
  #dataTable1 th{
   font-size:0.1em;
   color:  #FEFEFE;
