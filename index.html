@@ -20,6 +20,17 @@
                 <div class="col-md-12">
                     <h4><center> DLP output visualisation </center></h4>
                 </div>
+                <div class="row">
+                <div class="col-md-12">
+                    
+                    <div id="number-display-quote">Total Detections </div>
+                    <div id="number-display-infotype">Total InfoTypes </div>
+                </div>
+                    
+                   
+                    
+                </div>
+                    </div>
           <!--  </div>
             <div class="row" style="padding-top: 12px;">
                 
@@ -39,24 +50,16 @@
                 <!--  -->
          <div class="row">
             <div class="pull-right"></div>
-            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a> 
+            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a> 
          </div>                           
                                     
-            <!-- </div> -->
-         <!--   <div class="row">
-                <div class="col-md-6" id = "status"> <p> Feedback </p> </div>
-               
-                    
-                                                          
-              <div class="col-md-6" id = "type"> <p> Users wishing to be contacted </p></div>    
-                
-            </div> -->
+           
             
             <div class="row">
-                
-                <div class="col-md-4" id="rd"> <center> <b>InfoType </b> </center></div> 
-                <div class="col-md-4" id="pp" > <center> <b>Quote</b></center></div>
-                <div class="col-md-4" id="org"> <center><b> Likelihood </b></center></div>
+                 <div class="col-md-4" id="Likelihood"> <center><b> Likelihood </b></center></div>
+                <div class="col-md-4" id="InfoType"> <center> <b>InfoType </b> </center></div> 
+                <div class="col-md-4" id="Quote" > <center> <b>Quote</b></center></div>
+               
                 
                 
                 
@@ -70,7 +73,7 @@
                     <div class="col-md-12" style="overflow: auto">
                         <br>
           
-                <table class="table table-hover" id="dataTable1"> 
+                <table class="table table-hover" id="dataTable"> 
                     <colgroup>
                          <col style="background-color:#AFAFAF";/> 
                          <col style="background-color:#AFAFA";/>
@@ -80,21 +83,23 @@
                     <thead>
                           <tr class="header">  
                               <th><font size=3><font color="black">InfoType</font></font></th>
-                              <th><font size=3><font color="black">Likelihood</font></font></th> 
+                               
                               <th><font size=3><font color="black">Quotes</font></font></th>
                          </tr>
                     </thead>
                 </table>
           <tr class="header">  
                             <th><font size=1><font color="black">InfoType</font></font></th> 
-                            <th><font size=1><font color="black">Likelihood</font></font></th>
+                            
                             <th><font size=1><font color="brown">Quotes</font></font></th>
           </tr>
           
                         
                 </div>
             </div>
-            </div>
+            
+    
+    
         <script src="js/site.js"></script> 
     </body>
 </html>

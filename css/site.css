@@ -12,17 +12,29 @@
 }
 .reset {
     color: black;
-    text-align: center;
+    text-align: left;
+    margin-left: 100px;
+    font: bold;
 }
 /*body{
   background-color: #1DBFB2;
 }
 */
-#status{
+#InfoType{
     
     margin-bottom: 30px;
-    padding-left: 0px;
+    padding-left: 50px;
     
+}
+#number-display-quote{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right:30px;
+}
+#number-display-infotype{
+    font-weight: bold;
+    font-size: 15px;
 }
 .form-control {
   width: 190px;
@@ -31,14 +43,15 @@
 .special{
     background-color: "#1BB580";
 }
-#org{
-  padding-left: 150px;
-  padding-bottom: 50px;
+#Likelihood{
+  padding-right: 100px;
+  padding-left: 0px;
+  margin-bottom: 30px;
 
 }
-#pp{
-  padding-left: 80px;
-  padding-bottom: 50px;
+#Quote{
+  padding-left: 100px;
+  margin-bottom: 30px;
 }
 #header{
     border-bottom-color: #dddddd;
@@ -49,9 +62,12 @@
 #reset {
   float:right;
   margin-bottom: 10px;
-  padding-right: 5px;
+  padding-left: 20px;
+  margin-left: 1000px;
   background-color: aliceblue;
   border-color: aliceblue;
+  font: bold;
+
 }
 
 #footer{
@@ -61,10 +77,7 @@
   border-top-style: solid;
   border-top-width: 1px;
 }
-.removepadding {
-    padding-right:0px;
-    padding-left:0px;
-}
+
 .dc-chart g.row text {
     dominant-baseline: middle;
     fill: #333;
@@ -95,7 +108,7 @@
 
   }
 
- #dataTable1 th{
+ #dataTable th{
   font-size:0.1em;
   color:  #FEFEFE;
   overflow: auto;
