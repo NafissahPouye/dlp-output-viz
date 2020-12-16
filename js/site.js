@@ -144,12 +144,13 @@ numberDisplayInfotype
      
 
 }
-
+var searchParams = new URLSearchParams(window.location.search);
+let dataUrlParam = searchParams.get('dataUrl');
 
 var dataCall = $.ajax({
 
     type: 'GET',
-    url: 'https://raw.githubusercontent.com/NafissahPouye/testData/master/data.json',
+    url: dataUrlParam,
     dataType: 'json',
 
 });
