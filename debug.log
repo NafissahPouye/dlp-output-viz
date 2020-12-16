@@ -2,3 +2,4 @@
 [1119/151934.278:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\LENOVO T46OS\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\3e940309-7db6-43bb-b947-8fd9b236508c: Le chemin d’accès spécifié est introuvable. (0x3)
 [1124/160731.394:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
 [1124/182819.085:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[1125/222535.049:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
