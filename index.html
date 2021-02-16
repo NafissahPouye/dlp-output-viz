@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/dc.css"/>
         <link rel="stylesheet" type="text/css" href="css/site.css"/>
         <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
         <script src="js/jquery.js"></script>
         <script src="js/d3.min.js"></script>
         <script src="js/crossfilter.v1.min.js"></script>
@@ -16,40 +17,56 @@
     </head>
     <body >
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12">
                     <h4><center> DLP output visualisation </center></h4>
                 </div>
-                
                 <div class="row">
-                    
-                <div class="col-md-12">
-                     <div class="row">
-            <div class="pull-right"></div>
-            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a> 
-         </div>   
-                    <div id="number-display-quote">Total Detections: </div>
-                    <div id="number-display-infotype">Total InfoTypes: </div>
-                    
-                    
-                </div>
-                    
-                   
-                    
-                </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a> 
+                        </div>   
+                        <div id="number-display-quote">Total Detections: </div>
+                        <div id="number-display-infotype">Total InfoTypes: </div>
                     </div>
-                                          
-           
-            
+                </div>
+            </div> -->
+            <div class="header">
+                <h2>DLP output visualisation</h2>
+                <sep></sep>
+                <select name="select" id="">
+                    <option value="1">Valeur 1</option>
+                    <option value="2">Valeur 2</option>
+                    <option value="3">Valeur 3</option>
+                </select>
+                <sep></sep>
+                <div class="inline">
+                    <span id="number-display-quote">Total Detections: </span>
+                </div>
+                <sep></sep>
+                <div class="inline">
+                    <span id="number-display-infotype">Total InfoTypes: </span>
+                </div>
+                <sep></sep>
+                <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset selections</a> 
+            </div>
             <div class="row">
-                 <div class="col-md-4" id="InfoType"> <center> <b>InfoType </b> </center></div>
-                 <div class="col-md-4" id="Likelihood"> <center><b> Likelihood </b></center></div>
-                 <div class="col-md-4" id="Quote" > <center> <b>Quote</b></center></div>               
+                 <div class="col-md-4">
+                     <h3>InfoType</h3> 
+                     <div id="InfoType"></div>
+                 </div>
+                 <div class="col-md-4">
+                     <h3>Likelihood</h3>
+                     <div id="Likelihood"></div>   
+                 </div>
+                 <div class="col-md-4">
+                     <h3>Quote</h3>
+                     <div id="Quote"></div>
+                 </div>               
             </div> 
                    
-                    <div class="col-md-12" style="overflow: auto">
-                        <br>
-          
+            <div class="col-md-12" style="overflow: auto">
+                <br>
                 <table class="table table-hover" id="dataTable"> 
                     <colgroup>
                          <col style="background-color:#AFAFAF";/> 
@@ -65,14 +82,8 @@
                          </tr>
                     </thead>
                 </table>
-        
-          
-                        
-                </div>
             </div>
-            
-    
-    
+        </div>
         <script src="js/site.js"></script> 
     </body>
 </html>

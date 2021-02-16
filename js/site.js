@@ -10,6 +10,7 @@ var numberDisplayInfotype = dc.numberDisplay("#number-display-infotype");
 var cf = crossfilter(vardata);
 var all = cf.groupAll();
 var colors = ['#2C5197','#0B0B61'];
+var blueColor = '#007CE0';
     
 var likelihoodDimension = cf.dimension(function(d) {return d.likelihood});
 var likelihoodGroup = likelihoodDimension.group().reduceCount();
@@ -67,65 +68,53 @@ var infotypeGroupU = infotypeDimension.groupAll().reduce(
 );   
     
 
-     dataTab
-        .size(600)
-        .dimension(quoteDimension)
-        .group(function (d) {
-            return d.quoteGroup;
-        })
-        .columns([
-                    function (d) {
-                return d.infoType;
-                },
-                           
-                function (d) {
-                return d.quote;
-                }
-])
+dataTab
+  .size(600)
+  .dimension(quoteDimension)
+  .group(function (d) {
+      return d.quoteGroup;
+  })
+  .columns(
+    [function (d) {
+      return d.infoType;
+    },
+    function (d) {
+      return d.quote;
+    }
+]);
 
+var chartHeight = 350;
 
-likelihood.width(500).height(500)
+likelihood.width($('#Likelihood').width()).height(chartHeight)
         .dimension(likelihoodDimension)
         .group(likelihoodGroup)
-        
         .elasticX(true)
         .x(d3.scale.linear())
-         .gap(5)
-             /*.data(function(group) {
-                return group.top(10);
-            })*/
-            .colors('#007CE0')
-            //.colorAccessor(function(d, i){return 0;}) 
-            .ordering(function(d){ return -d.value; });
+        .gap(5)
+        .colors(blueColor)
+        .ordering(function(d){ return -d.value; });
 
 // rowCharts
-  infotype.width(500).height(500)
+  infotype.width($('#InfoType').width()).height(chartHeight)
             .dimension(infotypeDimension)
             .group(infoTypeGroup)
-         .elasticX(true)
-            /* .data(function(group) {
-                return group.top(50);
-            })*/
-            .colors('#007CE0')
-            
+            .elasticX(true)
+            .colors(blueColor)
             .ordering(function(d){ return d.value; });
     
   
-  quote.width(500)
-     .height(500)
+  quote.width($('#Quote').width())
+     .height(chartHeight)
             .dimension(quoteDimension)
             .group(quoteGroup)
             .elasticX(true)
             .data(function(group) {
                 return group.top(10);
             })
-            .colors('#007CE0')
-            
+            .colors(blueColor)
             .ordering(function(d){ return d.value; });
     
 // Number Display
-
-
 numberDisplayQuote
    .group(quoteGroupU)
    .valueAccessor(
@@ -138,27 +127,24 @@ numberDisplayInfotype
     function (d) { return Object.keys(d).length; }
   );
 
-
-
   dc.renderAll();
-     
-
+    
 }
+
 var searchParams = new URLSearchParams(window.location.search);
 let dataUrlParam = searchParams.get('dataUrl');
 
 var dataCall = $.ajax({
 
     type: 'GET',
-    url: dataUrlParam,
+    url: 'data2.json',
+    //url: 'https://s3.eu-central-1.amazonaws.com/hdx-ckan-filestore-prod-log/resources/3dd45a7e-e72f-4031-8c2f-80108ba876f4/pii.2021-02-10T10-44-32.dlp.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=180&X-Amz-Credential=AKIARZNKTAO7U6UN77MP%2F20210216%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20210216T135253Z&X-Amz-Signature=7a875720e5c6ac8b46368d1c3b27c66b5c9e6e41f6a84889ef714414e4a8ba10',
+    //url: dataUrlParam,
     dataType: 'json',
 
 });
 
 
-
 $.when(dataCall).then(function(dataArgs){
-
-       generatingCharts(dataArgs);
-
+  generatingCharts(dataArgs);
 });

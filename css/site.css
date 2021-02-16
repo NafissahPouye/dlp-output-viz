@@ -1,18 +1,62 @@
+.header {
+    background-color: #EDF6FD;
+    border-bottom: 1px solid #CCC;
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 49px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+h2 {
+    margin-left: 10px;
+}
+h2, .inline {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 49px;
+    display: inline;
+}
+h3 {
+    font-family: 'Gotham-Bold', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    margin: 0px 0px 10px;
+    text-align: center;
+}
+sep {
+    align-self: flex-start;
+    border-right: 1px solid #418FDE;
+    margin-right: 10px;
+    padding-right: 10px;
+    width: 100px;
+}
+
+select {
+    background-color: #FFF;
+    border-color: #FFF;
+    border-radius: 8px;
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+    font: 300 14px 'Source Sans Pro', sans-serif;
+    white-space: pre-wrap;
+    width: 150px;
+}
 .x-axis-label{
     font-size:0.8em;
 }
 .reset {
-    color: black;
-    text-align: right;
-    margin-left: 50px;
-    font: bold;
+    /* color: black; */
+    /* text-align: right; */
+    /* margin-left: 50px; */
+    /* font: bold; */
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
 }
-#InfoType{
-    
-    margin-bottom: 30px;
-    padding-right: 50px;
-    
-}
+
+
 #number-display-quote{
     font-weight: bold;
     font-size: 15px;
@@ -44,14 +88,16 @@
 .special{
     background-color: "#1BB580";
 }
+
+#InfoType {
+    width: 100%;
+}
 #Likelihood{
-  padding-left: 70px;
-  margin-bottom: 30px;
+  width: 100%;
 
 }
 #Quote{
-  padding-left: 130px;
-  margin-bottom: 30px;
+  width: 100%;
 }
 #header{
     border-bottom-color: #dddddd;
@@ -59,16 +105,7 @@
     border-bottom-width: 1px;
     margin-bottom:5px;
 }
-#reset {
-  float:left;
-  margin-bottom: 10px;
- /* padding-left: 100px;
-  margin-left: 100px;*/
-  background-color: aliceblue;
-  border-color: aliceblue;
-  font: bold;
 
-}
 
 #footer{
   margin-top: 20px;
@@ -125,5 +162,3 @@
     color: #999999;
 }
 
-
- 
