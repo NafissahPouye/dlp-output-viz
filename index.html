@@ -3,6 +3,7 @@
         <title> DLP output </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='icon' type='image/png' href='https://data.humdata.org/images/icons/hdx.ico' />
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/dc.css"/>
         <link rel="stylesheet" type="text/css" href="css/site.css"/>
@@ -12,32 +13,14 @@
         <script src="js/d3.min.js"></script>
         <script src="js/crossfilter.v1.min.js"></script>
         <script src="js/dc.js"></script>
-        <script src="js/leaflet.js"></script>  
         <script src="js/dc.leaflet.js"></script>   
     </head>
     <body >
         <div class="container">
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <h4><center> DLP output visualisation </center></h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a> 
-                        </div>   
-                        <div id="number-display-quote">Total Detections: </div>
-                        <div id="number-display-infotype">Total InfoTypes: </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="header">
                 <h2>DLP output visualisation</h2>
                 <sep></sep>
-                <select name="select" id="">
-                    <option value="1">Valeur 1</option>
-                    <option value="2">Valeur 2</option>
-                    <option value="3">Valeur 3</option>
+                <select name="select" id="select">
                 </select>
                 <sep></sep>
                 <div class="inline">
