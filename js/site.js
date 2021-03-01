@@ -95,7 +95,8 @@ function generatingCharts(dataID){
           .x(d3.scale.linear())
           .gap(5)
           .colors(blueColor)
-          .ordering(function(d){ return -d.value; });
+          .ordering(function(d){ return -d.value; })
+          .xAxis().ticks(5);
 
   // rowCharts
   infotype.width($('#InfoType').width()).height(chartHeight)
@@ -103,7 +104,8 @@ function generatingCharts(dataID){
               .group(infoTypeGroup)
               .elasticX(true)
               .colors(blueColor)
-              .ordering(function(d){ return d.value; });
+              .ordering(function(d){ return d.value; })
+              .xAxis().ticks(5);
       
     
   quote.width($('#Quote').width())
@@ -115,7 +117,8 @@ function generatingCharts(dataID){
                   return group.top(10);
               })
               .colors(blueColor)
-              .ordering(function(d){ return d.value; });
+              .ordering(function(d){ return d.value; })
+              .xAxis().ticks(5);
       
   // Number Display
   numberDisplayQuote
