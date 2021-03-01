@@ -143,9 +143,7 @@ let dataUrlParam = searchParams.get('dataUrl');
 var dataCall = $.ajax({
 
     type: 'GET',
-    url: 'data.json',
-    //url: 'https://s3.eu-central-1.amazonaws.com/hdx-ckan-filestore-prod-log/resources/3dd45a7e-e72f-4031-8c2f-80108ba876f4/pii.2021-02-10T10-44-32.dlp.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=180&X-Amz-Credential=AKIARZNKTAO7U6UN77MP%2F20210216%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20210216T135253Z&X-Amz-Signature=7a875720e5c6ac8b46368d1c3b27c66b5c9e6e41f6a84889ef714414e4a8ba10',
-    //url: dataUrlParam,
+    url: dataUrlParam,
     dataType: 'json',
 
 });
